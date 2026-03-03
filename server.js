@@ -1,9 +1,12 @@
 const mongoose=require('mongoose'); 
 const express=require('express');
+const cors=require('cors');
+
 const dotenv=require('dotenv');
 dotenv.config();
 const User=require('./user');
 const app=express();
+app.use(cors());
 
 
 mongoose.connect(process.env.connectionString)
